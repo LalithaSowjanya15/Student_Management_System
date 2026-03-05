@@ -70,7 +70,7 @@ Student_Management_System
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/Student_Management_System.git
+git clone https://github.com/LalithaSowjanya15/Student_Management_System.git
 ```
 
 ### 2. Navigate to the project folder
