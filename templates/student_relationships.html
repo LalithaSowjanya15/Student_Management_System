@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Friendships</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="list-page">
+
+<div class="list-container">
+
+    <h2 class="list-title">My Friends</h2>
+
+    {% if relations %}
+        {% for r in relations %}
+            <div class="friend-card">
+                <h4>{{ r.name }}</h4>
+                <p><b>Roll No :</b> {{ r.roll_no }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No Friends yet</p>
+    {% endif %}
+
+    <a href="/student_dashboard" class="back-link">← Back</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="student-login-page">
+
+<div class="top-header">
+    <div class="logo-area">
+        <img src="/static/images/kiet_logo.png" class="logo">
+        <span class="logo-text">KIET</span>
+    </div>
+</div>
+
+<div class="login-layout">
+
+    <div class="login-icon">
+        <img src="/static/images/student_icon.png" alt="student">
+    </div>
+
+    <div class="login-form">
+
+        <h2>Student Login</h2>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="roll_no" placeholder="Enter Roll Number" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="/" class="back-link">← Back</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

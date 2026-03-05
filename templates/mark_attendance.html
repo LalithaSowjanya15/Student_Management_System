@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="mark-attendance-page">
+
+<div class="add-student-container">
+
+    <h2>Mark Attendance</h2>
+
+    <form method="post">
+
+        <input
+            type="text"
+            name="roll_no"
+            placeholder="Roll Number"
+            required
+        >
+
+        <select name="status" required>
+            <option value="">Select Status</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <a href="/teacher_dashboard" class="back-link">← Back</a>
+
+</div>
+
+</body>
+</html>

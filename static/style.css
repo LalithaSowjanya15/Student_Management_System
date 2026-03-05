@@ -1,0 +1,597 @@
+/* ===============================
+   BASE STYLES (USED EVERYWHERE)
+================================ */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fbff;
+}
+
+
+/* ===============================
+   LANDING PAGE
+================================ */
+
+.landing-page {
+    background: #f8fbff;
+    min-height: 100vh;
+}
+
+/* reuse same top header */
+.landing-page .top-header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 60px;
+}
+
+/* main layout */
+.landing-page .landing-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 60px;
+}
+
+/* left text section */
+.landing-page .landing-left {
+    width: 55%;
+}
+
+.landing-page .landing-left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0b1f44;
+    margin-bottom: 25px;
+}
+
+.landing-page .landing-left p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    max-width: 520px;
+}
+
+/* right login area */
+.landing-page .landing-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* login icon */
+.landing-page .login-icon {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+/* common button */
+.landing-page .login-btn {
+    display: block;
+    width: 260px;
+    margin: 15px auto;
+    padding: 14px;
+
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* teacher button */
+.landing-page .login-btn.teacher {
+    background: #1f6feb;
+    color: white;
+}
+
+.landing-page .login-btn.teacher:hover {
+    background: #1558c0;
+    transform: translateY(-3px);
+}
+
+/* student button */
+.landing-page .login-btn.student {
+    border: 2px solid #1f6feb;
+    color: #1f6feb;
+    background: #f2f7ff;
+}
+
+.landing-page .login-btn.student:hover {
+    background: #1f6feb;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* ===============================
+   LOGIN PAGES (Teacher + Student)
+================================ */
+
+/* both pages background */
+.teacher-login-page,
+.student-login-page {
+    background: #f8fbff;
+    min-height: 100vh;
+}
+
+/* top header */
+.teacher-login-page .top-header,
+.student-login-page .top-header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 60px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f3a8a;
+}
+
+/* main login layout */
+.teacher-login-page .login-layout,
+.student-login-page .login-layout {
+    max-width: 1000px;
+    margin: 40px auto;
+
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+/* left icon */
+.teacher-login-page .login-icon img,
+.student-login-page .login-icon img {
+    width: 380px;
+    margin-top: 20px;
+}
+
+/* right form */
+.teacher-login-page .login-form,
+.student-login-page .login-form {
+    width: 360px;
+    text-align: center;
+}
+
+/* heading */
+.teacher-login-page .login-form h2,
+.student-login-page .login-form h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0b1f44;
+    margin-bottom: 30px;
+}
+
+/* input */
+.teacher-login-page .login-form input,
+.student-login-page .login-form input {
+    width: 100%;
+    padding: 14px;
+
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+/* button */
+.teacher-login-page .login-form button,
+.student-login-page .login-form button {
+    width: 100%;
+    padding: 14px;
+
+    background: #1f6feb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.teacher-login-page .login-form button:hover,
+.student-login-page .login-form button:hover {
+    background: #1558c0;
+}
+
+/* back link */
+.teacher-login-page .back-link,
+.student-login-page .back-link {
+    display: block;
+    margin-top: 25px;
+
+    text-decoration: none;
+    color: #1f6feb;
+    font-weight: 600;
+}
+
+/* error message */
+.teacher-login-page .error,
+.student-login-page .error {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   DASHBOARDS (Teacher + Student)
+================================ */
+
+.teacher-dashboard-page,
+.student-dashboard-page {
+    background: #f8fbff;
+    min-height: 100vh;
+}
+
+/* main container */
+.teacher-dashboard-page .dashboard-container,
+.student-dashboard-page .dashboard-container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* heading */
+.teacher-dashboard-page .dashboard-container h2,
+.student-dashboard-page .dashboard-container h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b1f44;
+    margin-bottom: 50px;
+}
+
+/* grid layout */
+.teacher-dashboard-page .dashboard-grid,
+.student-dashboard-page .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* dashboard buttons */
+.teacher-dashboard-page .dash-btn,
+.student-dashboard-page .dash-btn {
+    padding: 18px;
+    background: #1f6feb;
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.teacher-dashboard-page .dash-btn:hover,
+.student-dashboard-page .dash-btn:hover {
+    background: #1558c0;
+    transform: translateY(-4px);
+}
+
+/* full-width button */
+.teacher-dashboard-page .dash-btn.full,
+.student-dashboard-page .dash-btn.full {
+    grid-column: span 2;
+}
+
+/* logout button */
+.teacher-dashboard-page .logout-btn,
+.student-dashboard-page .logout-btn {
+    display: inline-block;
+    padding: 14px 50px;
+
+    background: #1f6feb;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.teacher-dashboard-page .logout-btn:hover,
+.student-dashboard-page .logout-btn:hover {
+    background: #1558c0;
+}
+
+/* ===============================
+   FORM PAGES (Add/Remove Student, Marks, Mark/Undo Attendance, Add Friend)
+================================ */
+
+.add-student-page,
+.remove-student-page,
+.marks-page,
+.mark-attendance-page,
+.undo-attendance-page,
+.add-friend-page {
+    background: #f8fbff;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* common form container */
+.add-student-page .add-student-container,
+.remove-student-page .add-student-container,
+.marks-page .add-student-container,
+.mark-attendance-page .add-student-container,
+.undo-attendance-page .add-student-container,
+.add-friend-page .add-student-container {
+    width: 360px;
+    text-align: center;
+}
+
+/* headings */
+.add-student-page h2,
+.remove-student-page h2,
+.marks-page h2,
+.mark-attendance-page h2,
+.undo-attendance-page h2,
+.add-friend-page h2 {
+    font-size: 28px;
+    color: #0b1f44;
+    margin-bottom: 30px;
+}
+
+/* inputs & select */
+.add-student-page input,
+.remove-student-page input,
+.marks-page input,
+.mark-attendance-page input,
+.undo-attendance-page input,
+.add-friend-page input,
+.list-input,
+
+.mark-attendance-page select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    box-sizing: border-box;
+    background: white;
+}
+
+/* buttons */
+.add-student-page button,
+.remove-student-page button,
+.marks-page button,
+.mark-attendance-page button,
+.undo-attendance-page button,
+.add-friend-page button,
+.list-btn {
+    width: 100%;
+    padding: 14px;
+
+    background: #1f6feb;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add-student-page button:hover,
+.remove-student-page button:hover,
+.marks-page button:hover,
+.mark-attendance-page button:hover,
+.undo-attendance-page button:hover,
+.add-friend-page button:hover {
+    background: #1558c0;
+}
+
+/* back links */
+.add-student-page .back-link,
+.remove-student-page .back-link,
+.marks-page .back-link,
+.mark-attendance-page .back-link,
+.undo-attendance-page .back-link,
+.add-friend-page .back-link,
+.attendance-container .back-link {
+    display: block;
+    margin-top: 25px;
+
+    text-decoration: none;
+    color: #1f6feb;
+    font-weight: 600;
+}
+
+/* ===============================
+   TABLE VIEW PAGES
+   (View Students + View Marks)
+================================ */
+
+.view-students-page,
+.marks-page {
+    background: #f8fbff;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 60px;
+}
+
+/* main containers */
+.view-students-container,
+.marks-container {
+    width: 95%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* headings */
+.view-students-container h2,
+.marks-container h2 {
+    font-size: 30px;
+    color: #0b1f44;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   COMMON TABLE DESIGN (ALL PAGES)
+================================ */
+
+.table-wrapper {
+    
+    margin-bottom: 25px;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-wrapper th {
+    background: #1f6feb;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.table-wrapper td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+    text-align: center;
+}
+
+.table-wrapper tr:nth-child(even) {
+    background: #f4f7ff;
+}
+
+.table-wrapper tr:hover {
+    background: #eef3ff;
+}
+
+
+/* ===============================
+   TABLE SIZE CONTROL
+================================ */
+
+.table-large {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.table-small {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ===============================
+   LIST BASED PAGES
+   (attendance, friendships)
+================================ */
+
+.list-page {
+    background: #f8fbff;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-container {
+    width: 380px;
+    text-align: center;
+}
+
+.list-title {
+    font-size: 28px;
+    color: #0b1f44;
+    margin-bottom: 30px;
+}
+
+/* list box */
+.list-box {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+/* common list item */
+.list-box li {
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    background: white;
+    border: 1px solid #e5e7eb;
+}
+
+/* attendance colors */
+.list-box li.present {
+    background: #e8f7ee;
+    color: #1a7f37;
+}
+
+.list-box li.absent {
+    background: #fdeaea;
+    color: #b42318;
+}
+
+/* friend card */
+.friend-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.friend-card h4 {
+    margin: 0;
+    color: #0b1f44;
+}
+
+.friend-card p {
+    margin: 6px 0 0;
+    color: #444;
+}
+
+/* back link */
+.list-container .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1f6feb;
+    font-weight: 600;
+}

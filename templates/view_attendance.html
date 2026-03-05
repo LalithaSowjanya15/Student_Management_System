@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Attendance</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="list-page">
+
+<div class="list-container">
+
+    <h2 class="list-title">Your Attendance</h2>
+
+    <!-- summary -->
+    <div class="attendance-summary">
+        <div class="present-box">
+            Present : {{ present_count }}
+        </div>
+        <div class="absent-box">
+            Absent : {{ absent_count }}
+        </div>
+    </div>
+
+    {% if data %}
+        <ul class="list-box">
+            {% for a in data %}
+                <li class="{{ a|lower }}">{{ a }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No attendance marked yet.</p>
+    {% endif %}
+
+    <a href="/student_dashboard" class="back-link">← Back</a>
+
+</div>
+
+</body>
+</html>

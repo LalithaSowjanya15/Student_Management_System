@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Students Details</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="view-students-page">
+
+<div class="view-students-container">
+
+    <h2>All Students Details</h2>
+
+    <div class="table-wrapper table-large">
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Subject 1</th>
+                <th>Subject 2</th>
+                <th>Subject 3</th>
+                <th>Subject 4</th>
+                <th>Subject 5</th>
+                <th>Percentage</th>
+                <th>Grade</th>
+                <th>Attendance</th>
+            </tr>
+
+            {% for s in students %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ s.name }}</td>
+                <td>{{ s.roll_no }}</td>
+
+                <td>{{ s.marks.subject1 if s.marks }}</td>
+                <td>{{ s.marks.subject2 if s.marks }}</td>
+                <td>{{ s.marks.subject3 if s.marks }}</td>
+                <td>{{ s.marks.subject4 if s.marks }}</td>
+                <td>{{ s.marks.subject5 if s.marks }}</td>
+
+                <td>{{ s.percentage if s.percentage }}</td>
+                <td>{{ s.grade if s.grade }}</td>
+
+                <td>
+                    {% if s.attendance %}
+                        {{ s.attendance | join(', ') }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <a href="/teacher_dashboard" class="back-link">← Back</a>
+
+</div>
+
+</body>
+</html>

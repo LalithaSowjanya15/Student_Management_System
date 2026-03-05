@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="teacher-login-page">
+
+<div class="top-header">
+    <div class="logo-area">
+        <img src="/static/images/kiet_logo.png" class="logo">
+        <span class="logo-text">KIET</span>
+    </div>
+</div>
+
+<div class="login-layout">
+
+    <div class="login-icon">
+        <img src="/static/images/teacher_icon.png" alt="teacher">
+    </div>
+
+    <div class="login-form">
+
+        <h2>Teacher Login</h2>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="/" class="back-link">← Back</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

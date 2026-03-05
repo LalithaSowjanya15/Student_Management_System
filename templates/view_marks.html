@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Marks</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="marks-page">
+
+<div class="marks-container">
+
+    <h2>Your Marks</h2>
+
+    {% if data and data.marks %}
+
+    <div class="table-wrapper table-small">
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+
+            <tr><td>Subject 1</td><td>{{ data.marks.subject1 }}</td></tr>
+            <tr><td>Subject 2</td><td>{{ data.marks.subject2 }}</td></tr>
+            <tr><td>Subject 3</td><td>{{ data.marks.subject3 }}</td></tr>
+            <tr><td>Subject 4</td><td>{{ data.marks.subject4 }}</td></tr>
+            <tr><td>Subject 5</td><td>{{ data.marks.subject5 }}</td></tr>
+        </table>
+    </div>
+
+    <div class="marks-summary">
+        <p><b>Percentage :</b> {{ data.percentage }}</p>
+        <p><b>Grade :</b> {{ data.grade }}</p>
+    </div>
+
+    {% else %}
+        <p>No marks assigned yet.</p>
+    {% endif %}
+
+    <a href="/student_dashboard" class="back-link">← Back</a>
+
+</div>
+
+</body>
+</html>
